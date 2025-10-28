@@ -286,6 +286,19 @@ a:hover {
     font-weight: bold;
 }
 
+.contact-form {
+    background-color: #16213e; /* Darker base to match input background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* Neon glow shadow */
+    border: 1px solid #00FFFF; /* Optional: neon border */
+  
+    transition: all 0.5s ease-in-out;
+}
+
+.contact-form:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+}
 .contact-form input,
 .contact-form textarea {
     width: 100%;

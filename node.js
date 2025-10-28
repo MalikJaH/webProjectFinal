@@ -61,7 +61,7 @@
 
     skills[i].addEventListener("mousemove", () => {
       skillsBG.style.backgroundImage = `url('${url}')`;
-      skillsBG.style.backgroundSize = "cover";
+      skillsBG.style.backgroundSize = "contain";
   });
 
   skills[i].addEventListener("mouseleave", () => {
@@ -72,6 +72,9 @@
 skillHover(0, "images/python.png");
 skillHover(1, "images/java.png");
 skillHover(2, "images/js.jpg");
+skillHover(3, "images/react.js.png");
+skillHover(4, "images/mysql.png");
+
 
 let inputs=document.getElementsByClassName("input");
 let submit=document.getElementsByClassName("submit")[0];
