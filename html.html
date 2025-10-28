@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <h1 class="logo">Eng. Malik Al-Hreini</h1>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <p class="greeting">Hello, I'm</p>
+                <h2 class="name-title">Malik Jamal Al-Horani</h2>
+                <h3 class="tagline">Software Engineer | Class of 2023 Representative.</h3>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary-btn">View My Work</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                </div>
+            
+            </div>
+            <div class="hero-image">
+                <img src="images/me.png" alt="Personal photo of Malik Al-Hreini" class="hero-avatar">
+            </div>
+            
+        </section>
+
+        <section id="about" class="about-section section-padding">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">
+                I'm a '3rd Year Software Engineering st.' , experienced in Java, C++, Python, and JavaScript. I have a strong experience in object-oriented programming and data structures. I worked at Abu Al-Abd Company for six years, where I solve problems related to AI and developed several machine learning models.
+            </p>
+        </section>
+
+        <section id="skills" class="skills-section section-padding">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">Python</div>
+                <div class="skill-card">Java and Cpp</div>
+                <div class="skill-card">Java Script</div>
+                <div class="skill-card">OOP </div>
+                <div class="skill-card">Data Structures </div>
+
+                <div class="skill-card">Machine Learning</div>
+                <div class="skill-card">Algorithms</div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section section-padding">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="projects-container">
+                <article class="project-card">
+                    <img src="images/image1.png" alt="Product Management System Project Image">
+                    <div class="project-info">
+                        <h3>Product Management System</h3>
+                        <p class="project-desc">A complete web application designed using **Grid Layout** to display data in an interactive and visually appealing way. It focuses on easy accessibility and clear visual design.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/[YourRepo]/project1" target="_blank" class="project-link github-link">GitHub </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card reverse">
+                    <img src="images/image.png" alt="Guess The Word Game Project Image">
+                    <div class="project-info">
+                        <h3>Guess The Word Game</h3>
+                        <p class="project-desc">The frontend interface for the "Guess The Word" game, designed to be interactive and engaging using HTML, CSS, and JavaScript.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/[YourRepo]/project2" target="_blank" class="project-link github-link">GitHub </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section section-padding">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="contact-text">I'm available for new projects and job opportunities. Don't hesitate to reach out!</p>
+
+            <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required class="input">
+                <input type="email" name="email" placeholder="Your Email" required class="input">
+                <textarea name="message" placeholder="Your Message" rows="5" required class="input"></textarea>
+               <div class="btnsub">
+                <button type="submit" class="btn primary-btn submit">Send Message</button>
+                </div>
+            </form>
+
+            <div class="social-links">
+                <p>Or connect directly via:</p>
+                <a href="mailto:202303998@gmail.com" class="social-link">Email</a> |
+                <a href="https://www.linkedin.com/in/malik-alhurani-a53731319/" target="_blank" class="social-link">LinkedIn</a> |
+                <a href="https://github.com/MalikJaH" target="_blank" class="social-link">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>All Rights Reserved &copy; 2025 | talla_ps</p>
+    </footer>
+<script src="node.js"></script>
+</body>
+</html>
