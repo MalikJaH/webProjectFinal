@@ -48,10 +48,10 @@
       
       });
         nav.addEventListener('mousemove', (e) => {
-        nav.style.backgroundColor="#1a1a2e";
+            nav.classList.add("hover");
         });
       nav.addEventListener('mouseleave', () => {
-                nav.style.backgroundColor="";
+      nav.classList.remove("hover");
 
       });
       
@@ -82,7 +82,7 @@ let submit=document.getElementsByClassName("submit")[0];
 submit.addEventListener("mousemove", () => {
     for (let input of inputs) {
         if (input.value === "") {
-  input.style.backgroundColor = "#FF9800";
+  input.style.backgroundColor = "rgba(255, 0, 0, 0.3)";
 }
   }});
 
@@ -92,4 +92,31 @@ submit.addEventListener("mousemove", () => {
       }
     
     });
- 
+
+    const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target); 
+      }
+    });
+  },
+  { threshold: 0.1 } 
+);
+
+reveals.forEach((el) => observer.observe(el));
+
+const text = "Software Engineer | AI Analyst | FullStack Developer";
+  let x = 0;
+function typing() {
+  if (x < text.length) {
+    document.querySelector(".tagline").textContent += text.charAt(x);
+    x++;
+    setTimeout(typing, 30);
+  }
+}
+window.onload = typing;
+

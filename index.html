@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
     <header class="main-header">
+
         <nav class="navbar">
             <h1 class="logo">Eng. Malik Al-Hreini</h1>
             
@@ -24,10 +27,11 @@
 
     <main>
         <section id="home" class="hero-section">
+            
             <div class="hero-content">
                 <p class="greeting">Hello, I'm</p>
                 <h2 class="name-title">Malik Jamal Al-Horani</h2>
-                <h3 class="tagline">Software Engineer | Class of 2023 Representative.</h3>
+                <h3 class="tagline"></h3>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn primary-btn">View My Work</a>
                     <a href="#contact" class="btn secondary-btn">Contact Me</a>
@@ -40,29 +44,29 @@
             
         </section>
 
-        <section id="about" class="about-section section-padding">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                I'm a '3rd Year Software Engineering st.' , experienced in Java, C++, Python, and JavaScript. I have a strong experience in object-oriented programming and data structures. I worked at Abu Al-Abd Company for six years, where I solve problems related to AI and developed several machine learning models.
+        <section id="about" class="about-section section-padding reveal">
+            <h2 class="section-title ">About Me</h2>
+            <p class="about-text ">
+                I'm a 3rd Year Software Engineering st.' , experienced in [ Java , C++ , Python , JavaScript , and MySql ]. I have a strong experience in object-oriented programming and data structures. I worked at Abu Al-Abd Company for six years, where I solve problems related to AI and developed several machine learning models.
             </p>
         </section>
 
-        <section id="skills" class="skills-section section-padding">
-            <h2 class="section-title">Technical Skills</h2>
+        <section id="skills" class="skills-section section-padding reveal" >
+            <h2 class="section-title reveal">Technical Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card">Python</div>
-                <div class="skill-card">Java and Cpp</div>
-                <div class="skill-card">Java Script</div>
-                <div class="skill-card">React JS</div>
-                <div class="skill-card">MySql</div>
+                <div class="skill-card reveal" >Python</div>
+                <div class="skill-card reveal">Java and Cpp</div>
+                <div class="skill-card reveal" >Java Script</div>
+                <div class="skill-card reveal">React JS</div>
+                <div class="skill-card reveal">MySql</div>
 
-                <div class="skill-card">Machine Learning</div>
-                <div class="skill-card">Algorithms</div>
+                <div class="skill-card reveal">Machine Learning</div>
+                <div class="skill-card reveal">Algorithms</div>
 
             </div>
         </section>
 
-        <section id="projects" class="projects-section section-padding">
+        <section id="projects" class="projects-section section-padding reveal">
             <h2 class="section-title">Selected Projects</h2>
             <div class="projects-container">
                 <article class="project-card">
@@ -76,7 +80,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reverse">
+                <article class="project-card reverse reveal">
                     <img src="images/image.png" alt="Guess The Word Game Project Image">
                     <div class="project-info">
                         <h3>Guess The Word Game</h3>
@@ -89,21 +93,21 @@
             </div>
         </section>
 
-        <section id="contact" class="contact-section section-padding">
+        <section id="contact" class="contact-section section-padding reveal">
             <h2 class="section-title">Contact Me</h2>
             <p class="contact-text">I'm available for new projects and job opportunities. Don't hesitate to reach out!</p>
 
-            <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required class="input">
-                <input type="email" name="email" placeholder="Your Email" required class="input">
-                <textarea name="message" placeholder="Your Message" rows="5" required class="input"></textarea>
+            <form action="https://formspree.io/f/yourformid" method="POST" class="contact-form reveal">
+                <input type="text" name="name" placeholder="Your Name" required class="input reveal">
+                <input type="email" name="email" placeholder="Your Email" required class="input reveal">
+                <textarea name="message" placeholder="Your Message" rows="5" required class="input reveal"></textarea>
                <div class="btnsub">
-                <button type="submit" class="btn primary-btn submit">Send Message</button>
+                <button type="submit" class="btn primary-btn submit reveal">Send Message</button>
                 </div>
             </form>
 
             <div class="social-links">
-                <p>Or connect directly via:</p>
+                <p>Or connect <span style="color: gold;"> directly</span> via:</p>
                 <a href="mailto:202303998@gmail.com" class="social-link">Email</a> |
                 <a href="https://www.linkedin.com/in/malik-alhurani-a53731319/" target="_blank" class="social-link">LinkedIn</a> |
                 <a href="https://github.com/MalikJaH" target="_blank" class="social-link">GitHub</a>
@@ -115,5 +119,6 @@
         <p>All Rights Reserved &copy; 2025 | talla_ps</p>
     </footer>
 <script src="node.js"></script>
+
 </body>
 </html>
