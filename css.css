@@ -363,28 +363,34 @@ a:hover {
 }
 
 @media (max-width: 900px) {
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
-    }
- 
+  
     .hero-content {
         max-width: 100%;
-        order: 2;
     }
-
+    .greeting{
+        font-size: 1.2rem;
+    }
+    .name-title{
+        font-size: 1.4rem;
+    }
+    .tagline{
+        font-size: 1.2rem;
+    }
+    .hero-avatar{
+        width: auto;
+        height: 30em;
+    }
     .logo {
         font-size: 1.2em;
     }
-
+    .cta-buttons .btn{
+        font-size: 1rem;
+    }
     .hero-image {
         margin-bottom: 40px;
-        order: 1;
+       
     }
 
-    .name-title {
-        font-size: 3rem;
-    }
 
     .project-card,
     .project-card.reverse {
@@ -433,28 +439,96 @@ a:hover {
     }
 
     .tagline {
+        font-size: 0.8rem;
+    }
+    .name-title{
         font-size: 1.2rem;
+    }
+   .cta-buttons{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 10px;
+   }
+   .cta-buttons .btn{
+    font-size: 0.8rem;
+    padding: 10px 20px  ;
+
+   }
+   .hero-content{
+    padding: 40px 4%;
+    
+   }
+}
+/* تحسين hero-section للشاشات الصغيرة جدًا (iPhone XR ~414px) */
+@media (max-width: 414px) {
+    #home{
+        padding-bottom: 0;
+    }
+    .hero-section {
+        flex-direction: column; /* العناصر تصبح عمودية */
+        align-items: center;
+        justify-content: center;
+        padding: 70px 5%;
+        min-height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        padding: 0;
+                 order: 1;
+
+    }
+
+    .greeting {
+        font-size: 1rem;
+    }
+
+    .name-title {
+        font-size: 1.5rem;
+        margin-left: 0;
+        white-space: normal; /* يكسر النص إذا طويل */
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+        margin-left: 0;
+        margin-bottom: 20px;
     }
 
     .cta-buttons {
-        display: flex;
         flex-direction: column;
         gap: 10px;
+        width: 100%;
+        align-items: center;
     }
 
     .cta-buttons .btn {
-        margin-right: 0;
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        width: 90%;
+        max-width: 250px;
+    }
+
+    .hero-image {
         width: 100%;
+        margin-top: 20px;
+        
+    }
+
+    .hero-avatar {
+        height: auto;
+        max-height: 300px;
+        width: auto;
+        object-fit: contain;
+       
+    }
+    .nav-links a{
+        font-size: 1rem;
+    }
+    .logo{
+        font-size: 1.2rem;
     }
 }
-@media (max-width: 530px) {
-.nav-links a {
-    font-size: 1rem;
-}
-.hero-content *{
-    font-size: 1.6rem;
-}
-.hero-content .tagline{
-    font-size: 1rem;
-}
-}
+

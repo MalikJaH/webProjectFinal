@@ -54,26 +54,7 @@
       nav.classList.remove("hover");
 
       });
-      
-  function skillHover(i, url) {
-    const skillsBG = document.getElementById("skills");
-    const skills = document.getElementsByClassName("skill-card");
 
-    skills[i].addEventListener("mousemove", () => {
-      skillsBG.style.backgroundImage = `url('${url}')`;
-      skillsBG.style.backgroundSize = "contain";
-  });
-
-  skills[i].addEventListener("mouseleave", () => {
-    skillsBG.style.backgroundColor = "#272740";
-    skillsBG.style.backgroundImage = "";
-  });
-}
-skillHover(0, "images/python.png");
-skillHover(1, "images/java.png");
-skillHover(2, "images/js.jpg");
-skillHover(3, "images/react.js.png");
-skillHover(4, "images/mysql.png");
 
 
 let inputs=document.getElementsByClassName("input");
@@ -119,4 +100,34 @@ function typing() {
   }
 }
 window.onload = typing;
+const skillDependencies = {
+    'Python': ['Machine Learning', 'Algorithms',"MySql"],
+    'Java and Cpp': ['Algorithms',"MySql"],
+    'Java Script': ['React JS','Algorithms'],
+    
+};
+
+const skillCards = document.querySelectorAll('.skill-card');
+
+skillCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        const skillName = card.textContent.trim();
+        
+        if (skillDependencies[skillName]) {
+            skillCards.forEach(otherCard => {
+                if (skillDependencies[skillName].includes(otherCard.textContent.trim())) {
+                    otherCard.style.boxShadow = '0 0 25px 5px rgba(255, 215, 0, 0.7)'; 
+                    otherCard.style.transform = 'scale(1.08)'; 
+                }
+            });
+        }
+    });
+
+    card.addEventListener('mouseleave', () => {
+        skillCards.forEach(otherCard => {
+            otherCard.style.boxShadow = '';
+            otherCard.style.transform = 'scale(1.05)'; 
+        });
+    });
+});
 
