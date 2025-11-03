@@ -34,28 +34,23 @@
     console.log(home);
     let nav = document.getElementsByClassName("main-header")[0];
 let lastScrollY = window.scrollY;
-const scrollThreshold = 10; // minimum scroll difference to trigger hide/show
-
+const scrollThreshold = 10; 
 window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
     
     if (Math.abs(currentScrollY - lastScrollY) < scrollThreshold) {
-        // do nothing if scroll is too small
         return;
     }
 
     if (currentScrollY > lastScrollY) {
-        // scrolling down
         nav.classList.add("hidden");
     } else {
-        // scrolling up
         nav.classList.remove("hidden");
     }
 
     lastScrollY = currentScrollY;
 });
 
-// hover effect
 nav.addEventListener("mousemove", () => {
     nav.classList.add("hover");
 });

@@ -102,7 +102,7 @@ a:hover {
     justify-content: space-around;
     min-height: 100vh;
 background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460, #533483);
-    background-size: 600% 600%; /* يجعل التدرج أكبر للحركة */
+    background-size: 600% 600%; 
     animation: neonGradient 20s ease infinite; 
         overflow: hidden;
         position: relative;
@@ -170,8 +170,8 @@ background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460, #533483);
 .name-title {
    font-size: 3rem;
   font-weight: 700;
-  color: #e0e0ff; /* أبيض مائل إلى بنفسجي ناعم */
-  text-shadow: 0 0 15px rgba(83, 52, 131, 0.6); /* توهج خفيف */
+  color: #e0e0ff; 
+  text-shadow: 0 0 15px rgba(83, 52, 131, 0.6); 
   letter-spacing: 2px;
     white-space: nowrap;
 }
@@ -328,11 +328,11 @@ background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460, #533483);
 }
 
 .contact-form {
-    background-color: #16213e; /* Darker base to match input background */
+    background-color: #16213e;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* Neon glow shadow */
-    border: 1px solid #00FFFF; /* Optional: neon border */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); 
+    border: 1px solid #00FFFF; 
   
     transition: all 0.5s ease-in-out;
 }
@@ -497,14 +497,14 @@ background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460, #533483);
     
    }
 }
-/* تحسين hero-section للشاشات الصغيرة جدًا (iPhone XR ~414px) */
+
 @media (max-width: 414px) {
    
     #home{
         padding-bottom: 0;
     }
     .hero-section {
-        flex-direction: column; /* العناصر تصبح عمودية */
+        flex-direction: column; 
         align-items: center;
         justify-content: center;
         padding: 70px 5%;
@@ -526,7 +526,7 @@ background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460, #533483);
     .name-title {
         font-size: 1.5rem;
         margin-left: 0;
-        white-space: normal; /* يكسر النص إذا طويل */
+        white-space: normal; 
     }
 
     .tagline {
