@@ -101,10 +101,30 @@ a:hover {
     align-items: center;
     justify-content: space-around;
     min-height: 100vh;
-    background: linear-gradient(135deg, #1a1a2e, #0f0f1c);
-    overflow: hidden;
-}
+background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460, #533483);
+    background-size: 600% 600%; /* يجعل التدرج أكبر للحركة */
+    animation: neonGradient 20s ease infinite; 
+        overflow: hidden;
+        position: relative;
 
+}
+@keyframes neonGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .hero-content {
     max-width: 45%;
 }
@@ -121,8 +141,15 @@ a:hover {
     height: 100vh;
     object-fit: cover;
     transition: transform 0.1s linear, filter 0.5s ease-out;
+     animation: avatarFloat 6s ease-in-out infinite alternate;
 }
-
+@keyframes avatarFloat {
+    0% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-1deg); }
+    50% { transform: translateY(5px) rotate(1deg); }
+    75% { transform: translateY(-5px) rotate(-1deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
 .hero-avatar:hover {
     filter:
         drop-shadow(0 0 5px rgba(0, 255, 255, 0.4))
@@ -141,12 +168,11 @@ a:hover {
 }
 
 .name-title {
-    font-size: 3rem;
-    margin: 10px 0;
-    color: #FFF;
-    text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
-    font-family: 'Times New Roman', Times, serif;
-    margin-left: 5%;
+   font-size: 3rem;
+  font-weight: 700;
+  color: #e0e0ff; /* أبيض مائل إلى بنفسجي ناعم */
+  text-shadow: 0 0 15px rgba(83, 52, 131, 0.6); /* توهج خفيف */
+  letter-spacing: 2px;
     white-space: nowrap;
 }
 
@@ -197,7 +223,12 @@ a:hover {
 }
 
 .skills-section {
-    background-color: #272740;
+    background: linear-gradient(45deg, #0ff, #ff00ff, #00ffea, #ff1493);
+    background-size: 600% 600%;
+    
+    animation: neonGradient 20s ease infinite; 
+    position: relative;
+    
 }
 
 .skills-grid {
@@ -205,7 +236,11 @@ a:hover {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
+.skillsTitle{
+    color: black;
+    animation: avatarFloat 16s ease-in-out infinite alternate;
 
+}
 .skill-card {
     background-color: #1a1a2e;
     padding: 20px;
@@ -216,6 +251,8 @@ a:hover {
     transition: transform 0.3s, box-shadow 0.3s;
     font-size: 1.3em;
     white-space: nowrap;
+        animation: avatarFloat 12s ease-in-out infinite alternate;
+
 }
 
 .skill-card:hover {
@@ -462,6 +499,7 @@ a:hover {
 }
 /* تحسين hero-section للشاشات الصغيرة جدًا (iPhone XR ~414px) */
 @media (max-width: 414px) {
+   
     #home{
         padding-bottom: 0;
     }
@@ -529,6 +567,13 @@ a:hover {
     }
     .logo{
         font-size: 1.2rem;
+    }
+    .section-title{
+        width: 100%;
+        text-align: center;
+    }
+    .about-text{
+        text-align: center;
     }
 }
 

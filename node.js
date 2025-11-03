@@ -32,28 +32,36 @@
     }
     });
     console.log(home);
-    let nav=document.getElementsByClassName("main-header")[0];
-      let lastScrollY = window.scrollY;
+    let nav = document.getElementsByClassName("main-header")[0];
+let lastScrollY = window.scrollY;
+const scrollThreshold = 10; // minimum scroll difference to trigger hide/show
 
-  window.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
     
-        if (window.scrollY > lastScrollY) {
-            nav.classList.add("hidden");
-          } 
-  else {
-      nav.classList.remove("hidden");
-  }
-      
-          lastScrollY = window.scrollY;
-      
-      });
-        nav.addEventListener('mousemove', (e) => {
-            nav.classList.add("hover");
-        });
-      nav.addEventListener('mouseleave', () => {
-      nav.classList.remove("hover");
+    if (Math.abs(currentScrollY - lastScrollY) < scrollThreshold) {
+        // do nothing if scroll is too small
+        return;
+    }
 
-      });
+    if (currentScrollY > lastScrollY) {
+        // scrolling down
+        nav.classList.add("hidden");
+    } else {
+        // scrolling up
+        nav.classList.remove("hidden");
+    }
+
+    lastScrollY = currentScrollY;
+});
+
+// hover effect
+nav.addEventListener("mousemove", () => {
+    nav.classList.add("hover");
+});
+nav.addEventListener("mouseleave", () => {
+    nav.classList.remove("hover");
+});
 
 
 
@@ -116,7 +124,7 @@ skillCards.forEach(card => {
         if (skillDependencies[skillName]) {
             skillCards.forEach(otherCard => {
                 if (skillDependencies[skillName].includes(otherCard.textContent.trim())) {
-                    otherCard.style.boxShadow = '0 0 25px 5px rgba(255, 215, 0, 0.7)'; 
+                    otherCard.style.backgroundColor = ' rgba(255, 217, 0, 0.82)'; 
                     otherCard.style.transform = 'scale(1.08)'; 
                 }
             });
@@ -125,7 +133,7 @@ skillCards.forEach(card => {
 
     card.addEventListener('mouseleave', () => {
         skillCards.forEach(otherCard => {
-            otherCard.style.boxShadow = '';
+            otherCard.style.backgroundColor = '#1a1a2e';
             otherCard.style.transform = 'scale(1.05)'; 
         });
     });
